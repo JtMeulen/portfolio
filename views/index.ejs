@@ -1,152 +1,112 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<!-- Meta Data -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Joey ter Meulen | Web Developer</title>
-	<!-- Styles -->
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!-- Script for smooth scrolling with anchor tags -->
-	<script>
-	$(document).ready(function(){
-	  // Add smooth scrolling to all links
-	  $("a").on('click', function(event) {
+<% include ./partials/header %>
 
-	    // Make sure this.hash has a value before overriding default behavior
-	    if (this.hash !== "") {
-	      // Prevent default anchor click behavior
-	      event.preventDefault();
+<header>
+	<h2>&lt;&#47;Joey ter Meulen&gt;</h2>
+	<div id="nav">
+		<a href="#about">About</a>
+		<a href="#portfolio">Projects</a>
+		<a href="#">Contact</a>
+	</div>
+</header>
 
-	      // Store hash
-	      var hash = this.hash;
+<section id="hero">
+	<div class="headshot">
+		<div class="round-image"></div>
+		<h1>Joey ter Meulen</h1>
+		<hr>
+		<h2>Web Developer</h2>
+		<ul>
+			<li><a href="https://www.facebook.com/joey.termeulen" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/joey-ter-meulen-205365120/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+			<li><a href="https://github.com/JtMeulen" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+		</ul>
+	</div>
+</section>
 
-	      // Using jQuery's animate() method to add smooth page scroll
-	      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-	      $('html, body').animate({
-	        scrollTop: $(hash).offset().top
-	      }, 600, function(){
-	   
-	        // Add hash (#) to URL when done scrolling (default click behavior)
-	        window.location.hash = hash;
-	      });
-	    } // End if
-	  });
-	});
-	</script>
-</head>
-<body>
-	<header>
-		<h2>&lt;&#47;Joey ter Meulen&gt;</h2>
-		<div id="nav">
-			<a href="#about">About</a>
-			<a href="#portfolio">Projects</a>
-			<a href="#">Contact</a>
-		</div>
-	</header>
-	
-	<section id="hero">
-		<div class="headshot">
-			<div class="round-image"></div>
-			<h1>Joey ter Meulen</h1>
-			<hr>
-			<h2>Web Developer</h2>
-			<ul>
-				<li><a href="https://www.facebook.com/joey.termeulen" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-				<li><a href="https://www.linkedin.com/in/joey-ter-meulen-205365120/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-				<li><a href="https://github.com/JtMeulen" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
-	</section>
-	
-	<section id="about">
-		<div class="title">
-			<h2>A little bit about me</h2>
-			<h4>From Zero to Hero in a year</h4>
-			<hr>
-		</div>
-		<p>
-			Sed pellentesque in mauris et porta. Fusce lorem purus, suscipit sit amet ullamcorper non, pulvinar a magna. Sed urna urna, laoreet quis ullamcorper sed, varius et nisl. Aliquam tincidunt lorem et ex blandit, at aliquet orci fermentum. Curabitur fermentum a lectus nec convallis. Sed sed consectetur massa, et eleifend magna. Etiam suscipit erat ut ligula lacinia, quis vestibulum ligula cursus. Aenean at fringilla leo. Fusce ornare in erat ut euismod. Nullam aliquet orci a turpis fringilla, eget posuere dui fermentum. Aenean placerat maximus nisl ut gravida. Phasellus consectetur lectus vitae nisi lobortis, a fermentum eros elementum. Ut fringilla, ipsum blandit vulputate tempus, mi justo accumsan eros, tempus efficitur sem leo quis diam.
-		</p><p>	
-			Sed dapibus volutpat diam at consequat. Integer non neque sed est euismod dictum. In aliquet, urna at volutpat aliquam, nisi orci elementum libero, et lacinia enim dolor non purus. Sed lacus arcu, vehicula id bibendum vitae, semper sed lectus. Phasellus convallis eleifend blandit. Suspendisse tristique in arcu non pellentesque. Phasellus non vulputate velit. In vitae lobortis magna. Donec rhoncus odio sit amet mattis euismod. Sed vitae feugiat magna, nec tincidunt turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Maecenas dictum, arcu a efficitur facilisis, nunc nisl tincidunt dolor, ac aliquam tortor nisl volutpat odio. Quisque neque elit, ornare quis arcu ac, consectetur tincidunt lectus. Sed non risus sem.
-		</p><p>
-			Nam sollicitudin fringilla arcu, at consectetur tellus aliquet in. Ut non consectetur est, ac sodales velit. In sodales sit amet lacus rhoncus porttitor. Nam quis sapien a neque varius finibus. Morbi at nunc eu odio maximus bibendum. Donec auctor faucibus felis, vel mattis ipsum aliquam sed. Morbi nec velit volutpat, maximus nisl id, ornare tellus. Suspendisse tincidunt condimentum lectus, sollicitudin efficitur neque malesuada eu. Donec tempor aliquam sem, in tincidunt nisl varius vel.
-		</p>
-	</section>
+<section id="about">
+	<div class="title">
+		<h2>A little bit about me</h2>
+		<h4>From Zero to Hero in a year</h4>
+		<hr>
+	</div>
+	<p>
+		Sed pellentesque in mauris et porta. Fusce lorem purus, suscipit sit amet ullamcorper non, pulvinar a magna. Sed urna urna, laoreet quis ullamcorper sed, varius et nisl. Aliquam tincidunt lorem et ex blandit, at aliquet orci fermentum. Curabitur fermentum a lectus nec convallis. Sed sed consectetur massa, et eleifend magna. Etiam suscipit erat ut ligula lacinia, quis vestibulum ligula cursus. Aenean at fringilla leo. Fusce ornare in erat ut euismod. Nullam aliquet orci a turpis fringilla, eget posuere dui fermentum. Aenean placerat maximus nisl ut gravida. Phasellus consectetur lectus vitae nisi lobortis, a fermentum eros elementum. Ut fringilla, ipsum blandit vulputate tempus, mi justo accumsan eros, tempus efficitur sem leo quis diam.
+	</p><p>	
+		Sed dapibus volutpat diam at consequat. Integer non neque sed est euismod dictum. In aliquet, urna at volutpat aliquam, nisi orci elementum libero, et lacinia enim dolor non purus. Sed lacus arcu, vehicula id bibendum vitae, semper sed lectus. Phasellus convallis eleifend blandit. Suspendisse tristique in arcu non pellentesque. Phasellus non vulputate velit. In vitae lobortis magna. Donec rhoncus odio sit amet mattis euismod. Sed vitae feugiat magna, nec tincidunt turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Maecenas dictum, arcu a efficitur facilisis, nunc nisl tincidunt dolor, ac aliquam tortor nisl volutpat odio. Quisque neque elit, ornare quis arcu ac, consectetur tincidunt lectus. Sed non risus sem.
+	</p><p>
+		Nam sollicitudin fringilla arcu, at consectetur tellus aliquet in. Ut non consectetur est, ac sodales velit. In sodales sit amet lacus rhoncus porttitor. Nam quis sapien a neque varius finibus. Morbi at nunc eu odio maximus bibendum. Donec auctor faucibus felis, vel mattis ipsum aliquam sed. Morbi nec velit volutpat, maximus nisl id, ornare tellus. Suspendisse tincidunt condimentum lectus, sollicitudin efficitur neque malesuada eu. Donec tempor aliquam sem, in tincidunt nisl varius vel.
+	</p>
+</section>
 
-	<section id="portfolio">
-		<div class="title">
-			<h2>Some of my work</h2>
-			<h4>Projects I have been working on in the past year</h4>
-			<hr>
-		</div>
-		<div class="showreel">
-			<a class="project" id="project1" href="#">
-				<div class="overlay">
-					<h3>Shoppingcard</h3>
-					<p>A small grocerylist app, shareable for multiple users. It's my first project for day to day use. </p>
-					<ul>
-						<li>NodeJs</li>
-						<li>MongoDB</li>
-					</ul>
-				</div>
-			</a>
-			<a class="project" id="project2" href="#">
-				<div class="overlay">
-					<h3>Shoppingcard</h3>
-					<p>A small grocerylist app, shareable for multiple users. It's my first project for day to day use. </p>
-					<ul>
-						<li>NodeJs</li>
-						<li>MongoDB</li>
-					</ul>
-				</div>
-			</a>
-			<a class="project" id="project3" href="#">
-				<div class="overlay">
-					<h3>Shoppingcard</h3>
-					<p>A small grocerylist app, shareable for multiple users. It's my first project for day to day use. </p>
-					<ul>
-						<li>NodeJs</li>
-						<li>MongoDB</li>
-					</ul>
-				</div>
-			</a>
-			<a class="project" id="project4" href="#">
-				<div class="overlay">
-					<h3>Shoppingcard</h3>
-					<p>A small grocerylist app, shareable for multiple users. It's my first project for day to day use. </p>
-					<ul>
-						<li>NodeJs</li>
-						<li>MongoDB</li>
-					</ul>
-				</div>
-			</a>
-			<a class="project" id="project5" href="#">
-				<div class="overlay">
-					<h3>Shoppingcard</h3>
-					<p>A small grocerylist app, shareable for multiple users. It's my first project for day to day use. </p>
-					<ul>
-						<li>NodeJs</li>
-						<li>MongoDB</li>
-					</ul>
-				</div>
-			</a>
-			<a class="project" id="project6" href="#">
-				<div class="overlay">
-					<h3>Shoppingcard</h3>
-					<p>A small grocerylist app, shareable for multiple users. It's my first project for day to day use. </p>
-					<ul>
-						<li>NodeJs</li>
-						<li>MongoDB</li>
-					</ul>
-				</div>
-			</a>
-			
-		</div>
-	</section>
-	
-	<footer></footer>
-</body>
-</html>
+<section id="portfolio">
+	<div class="title">
+		<h2>Some of my work</h2>
+		<h4>Projects I have been working on in the past year</h4>
+		<hr>
+	</div>
+	<div class="showreel">
+		<a class="project" id="project1" href="#">
+			<div class="overlay">
+				<h3>Shoppingcard</h3>
+				<p>A small grocerylist app, shareable for multiple users. It's my first project for day to day use. </p>
+				<ul>
+					<li>NodeJs</li>
+					<li>MongoDB</li>
+				</ul>
+			</div>
+		</a>
+		<a class="project" id="project2" href="#">
+			<div class="overlay">
+				<h3>Shoppingcard</h3>
+				<p>A small grocerylist app, shareable for multiple users. It's my first project for day to day use. </p>
+				<ul>
+					<li>NodeJs</li>
+					<li>MongoDB</li>
+				</ul>
+			</div>
+		</a>
+		<a class="project" id="project3" href="#">
+			<div class="overlay">
+				<h3>Shoppingcard</h3>
+				<p>A small grocerylist app, shareable for multiple users. It's my first project for day to day use. </p>
+				<ul>
+					<li>NodeJs</li>
+					<li>MongoDB</li>
+				</ul>
+			</div>
+		</a>
+		<a class="project" id="project4" href="#">
+			<div class="overlay">
+				<h3>Shoppingcard</h3>
+				<p>A small grocerylist app, shareable for multiple users. It's my first project for day to day use. </p>
+				<ul>
+					<li>NodeJs</li>
+					<li>MongoDB</li>
+				</ul>
+			</div>
+		</a>
+		<a class="project" id="project5" href="#">
+			<div class="overlay">
+				<h3>Shoppingcard</h3>
+				<p>A small grocerylist app, shareable for multiple users. It's my first project for day to day use. </p>
+				<ul>
+					<li>NodeJs</li>
+					<li>MongoDB</li>
+				</ul>
+			</div>
+		</a>
+		<a class="project" id="project6" href="#">
+			<div class="overlay">
+				<h3>Shoppingcard</h3>
+				<p>A small grocerylist app, shareable for multiple users. It's my first project for day to day use. </p>
+				<ul>
+					<li>NodeJs</li>
+					<li>MongoDB</li>
+				</ul>
+			</div>
+		</a>
+		
+	</div>
+</section>
+
+<% include ./partials/footer %>
