@@ -21,8 +21,8 @@ app.get("/mountaintravel/example", function(req, res){
 	res.render("mountaintravel_example");
 });
 
-app.listen(3000, "127.0.0.1", function(){
-	console.log("Server started");
+app.listen(app.get('port'), function(){
+	console.log("Server started on port" + app.get('port'));
 });
 
 
