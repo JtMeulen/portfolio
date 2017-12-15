@@ -244,8 +244,13 @@ footer {
 /* Tablet*/
 @media screen and (max-width: 800px){
 	.project, .overlay {	
-	height: 115px;
-	flex-basis: 200px;
+	height: 160px;
+	flex-basis: 300px;
+	font-size: 0.85em; 
+	}
+
+	.showreel {
+		width: 90vw;
 	}
 
 	header {
