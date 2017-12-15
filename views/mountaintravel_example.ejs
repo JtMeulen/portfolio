@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- meta -->
+	<title>Mountain Travel</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- css -->
+	<link rel="stylesheet" href="/stylesheets/mountaintravel_styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Play:400,700" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<!-- Script for smooth scrolling with anchor tags -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	  // Add smooth scrolling to all links
+	  $("a").on('click', function(event) {
+
+	    // Make sure this.hash has a value before overriding default behavior
+	    if (this.hash !== "") {
+	      // Prevent default anchor click behavior
+	      event.preventDefault();
+
+	      // Store hash
+	      var hash = this.hash;
+
+	      // Using jQuery's animate() method to add smooth page scroll
+	      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+	      $('html, body').animate({
+	        scrollTop: $(hash).offset().top
+	      }, 800, function(){
+	   
+	        // Add hash (#) to URL when done scrolling (default click behavior)
+	        window.location.hash = hash;
+	      });
+	    } // End if
+	  });
+	});
+	</script>
+</head>
+<body>
+	<!-- banner and landing page-->
+	<header>
+		<div class="navbar">
+			<h2>Mountain Travel</h2>
+			<div class="nav">
+				<a href="#demo">Home</a>
+				<a href="#features">Products</a>
+				<a href="#about">About</a>
+				<a href="#contact">Contacts</a>
+			</div>
+		</div>
+		<div class="hero">
+			<h1>Mountain Travel</h1>
+			<h3>Unmissable Mountain Tours Around the World</h3>
+			<a href="#contact" class="action-button">Contact Us Now</a>
+		</div>		
+	</header>
+
+	<!-- demo section -->
+	<section class="demo" id="demo">
+		<h1>Some Of Our Destinations</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum<br>ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.
+		</p>
+		<hr>
+		<div class="photo-section">
+			<div class="photo"></div>
+			<div class="photo"></div>
+			<div class="photo"></div>
+			<div class="photo"></div>
+		</div>
+	</section>
+
+	<!-- feature section -->
+	<section class="features" id="features">
+		<h1>Tour Packages</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum<br>ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.
+		</p>
+		<hr>
+		<div class="trip-section">
+			<div class="trip">
+				<i class="fa fa-compass" aria-hidden="true"></i>
+				<h4>Guided Trips</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum</p>
+			</div>
+			<div class="trip">
+				<i class="fa fa-camera-retro" aria-hidden="true"></i>
+				<h4>Photo Trips</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum</p>
+			</div>
+			<div class="trip">
+				<i class="fa fa-bicycle" aria-hidden="true"></i>
+				<h4>Biking Trips</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum</p>
+			</div>
+			<div class="trip">
+				<i class="fa fa-flag-checkered" aria-hidden="true"></i>
+				<h4>Racing Trips</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum</p>
+			</div>			
+		</div>
+	</section>
+
+	<section class="reviews" id="about">
+		<h1>Testimonials From Our Adventurers</h1>
+		<hr>
+		<div class="review-section">
+			<div class="review">
+				<p>Quisque sed elementum lorem. Vestibulum ornare tellus nunc, sed feugiat massa egestas in. Sed aliquet finibus odio. Mauris dignissim tempus odio, pellentesque feugiat sapien sagittis vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar id elit non hendrerit. Morbi non nibh a elit scelerisque dignissim. </p>
+				<p><em><strong>- Joey ter Meulen</strong></em></p>				
+			</div>
+			<div class="review">
+				<p>Quisque sed elementum lorem. Vestibulum ornare tellus nunc, sed feugiat massa egestas in. Sed aliquet finibus odio. Mauris dignissim tempus odio, pellentesque feugiat sapien sagittis vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar id elit non hendrerit. Morbi non nibh a elit scelerisque dignissim. </p>
+				<p><em><strong>- Joey ter Meulen</strong></em></p>
+			</div>
+			<div class="review">
+				<p>Quisque sed elementum lorem. Vestibulum ornare tellus nunc, sed feugiat massa egestas in. Sed aliquet finibus odio. Mauris dignissim tempus odio, pellentesque feugiat sapien sagittis vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pulvinar id elit non hendrerit. Morbi non nibh a elit scelerisque dignissim. </p>
+				<p><em><strong>- Joey ter Meulen</strong></em></p>
+			</div>			
+		</div>
+	</section>
+
+	<section class="callout">
+		<h1>Learn More</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id felis et ipsum bibendum<br>ultrices. Morbi vitae pulvinar velit. Sed aliquam dictum sapien, id sagittis augue malesuada eu.
+		</p>
+		<hr>
+		<form class="subscribe">
+			<input type="text" name="email" placeholder="Email">
+			<submit href="" class="action-button">Subscribe</submit>
+		</form>
+	</section>
+
+	<footer id="contact">
+		<p>MADE BY <a target="_blank" href="https://www.linkedin.com/in/joey-ter-meulen-205365120">JOEY TER MEULEN</a>. IMAGES COURTESY OF <a target="_blank" href="https://unsplash.com">UNSPLASH</a>.</p>
+		<P>THIS FOOTER CONTAINS NO INTERESTING INFORMATION AT ALL. STOP READING.</P>
+		<p class="icons">
+			<a target="_blank" href="https://www.facebook.com/joey.termeulen" ><i class="fa fa-facebook" aria-hidden="true"></i></a>
+			<a target="_blank" href="http://www.kbc.co.ke/wp-content/uploads/2017/02/Twitter-1.png"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+			<a target="_blank" href="https://github.com/JtMeulen"><i class="fa fa-github" aria-hidden="true"></i></a>
+		</p>
+	</footer>
+
+
+</body>
+</html>
