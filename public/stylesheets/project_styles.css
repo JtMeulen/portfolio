@@ -1,10 +1,92 @@
+#headerProjects a {
+	color: white;
+}
+
+.titlebar {
+	position: relative;
+	height: 220px;
+	background-color: #242526;
+	z-index: -1;
+	margin-bottom: 40px;
+}
+
+.titlebar h1, .titlebar h4 {
+	color: white;
+	margin-top:0;
+	padding-left: 50px;
+}
+
+.titlebar h1 {
+	padding-top: 120px;
+	margin-bottom: 10px;
+	font-size: 40px;
+}
+
 .image-container {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	margin-bottom: 40px;
 }
 
 .image-container img {
 	width:80%;
 	height: 80%;
+}
+
+/* information section*/
+.project-description {
+	flex-direction: column;
+	padding-bottom: 20px;
+}
+
+.project-description p, .project-description ul, .project-description a {	
+	padding: 0 10%;
+}
+
+.project-description a:visited, .project-description a:link {
+	color: #4f72ad;
+	font-weight: bold;
+}
+
+.project-description a:hover, .project-description a:active {
+	color: #1e3a68;
+	font-weight: bold;
+}
+
+.project-description a {
+	color
+}
+
+.project-description li {
+	list-style: none;
+	font-style: italic;
+}
+
+.dependencies {
+	margin-top: 0;
+}
+
+
+
+
+/**** Screen breakpoint styles ****/
+/* Mobile */
+@media screen and (max-width: 450px){
+
+	#headerProjects h2 {
+		padding-left: 20px;
+	}
+
+	.titlebar h1, .titlebar h4 {
+		padding-left: 20px;
+	}
+}
+
+
+/* Tablet*/
+@media screen and (max-width: 800px){
+	#headerProjects #nav {
+		display: none;
+	}
 }
