@@ -1,3 +1,11 @@
+section:nth-of-type(odd){
+	background-color: white;
+}
+
+section:nth-of-type(even){
+	background-color: #f2f2f2;
+}
+
 #headerProjects a {
 	color: white;
 }
@@ -7,7 +15,6 @@
 	height: 220px;
 	background-color: #242526;
 	z-index: -1;
-	margin-bottom: 40px;
 }
 
 .titlebar h1, .titlebar h4 {
@@ -26,7 +33,7 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-bottom: 40px;
+	margin: 40px 0;
 }
 
 .image-container img {
@@ -40,22 +47,18 @@
 	padding-bottom: 20px;
 }
 
-.project-description p, .project-description ul, .project-description a {	
+section p, section ul, section a {	
 	padding: 0 10%;
 }
 
-.project-description a:visited, .project-description a:link {
+section a:visited, section a:link {
 	color: #4f72ad;
 	font-weight: bold;
 }
 
-.project-description a:hover, .project-description a:active {
+section a:hover, section a:active {
 	color: #1e3a68;
 	font-weight: bold;
-}
-
-.project-description a {
-	color
 }
 
 .project-description li {
@@ -67,8 +70,19 @@
 	margin-top: 0;
 }
 
+/* other projects pages*/
+iframe {
+	margin: 10px 30px;
+}
 
-
+#copy_photo_image {
+	text-align: center;
+	padding-top: 40px;
+	flex-direction: column;
+	display: flex;
+	align-items: center;
+	width: 80vw;
+}
 
 /**** Screen breakpoint styles ****/
 /* Mobile */
@@ -81,6 +95,15 @@
 	.titlebar h1, .titlebar h4 {
 		padding-left: 20px;
 	}
+
+	iframe {
+		width: 80%;
+		height: 200px;
+	}
+
+	#copy_photo_image {
+	text-align: center;
+	padding-top: 10px;
 }
 
 
@@ -88,5 +111,13 @@
 @media screen and (max-width: 800px){
 	#headerProjects #nav {
 		display: none;
+	}
+
+	#copy_photo_image {
+		display: block;
+	}
+
+	#copy_photo_image img {
+		width: 100%;
 	}
 }
