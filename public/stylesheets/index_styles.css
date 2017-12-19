@@ -12,8 +12,12 @@ section:not(#hero) {
 	flex-wrap: wrap;
 }
 
-section:nth-of-type(odd){
+section:nth-of-type(odd):not(#hero){
 	background-color: #f2f2f2;
+}
+
+section:nth-of-type(even){
+	background-color: white;
 }
 
 .title {
@@ -75,16 +79,30 @@ header h2 {
 
 
 /* Hero Styles*/
+#parallax-image {
+	background-image: url(../img/background.jpg);
+	top: 0;
+	left: 0;
+	z-index: -10;
+	background-repeat: no-repeat;
+	position: fixed;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+}
+
 #hero {
 	position: relative;
 	top: 0;
 	left: 0;
-	background-image: url(../img/background.jpg);
-	background-size: cover;
+	background-color: none;
+/*	background-image: url(../img/background.jpg);
+	background-size: cover;*/
 	height: 700px;
 	display: flex;	
 	justify-content: center;
 	align-items: center;
+	overflow: hidden;
 }
 
 .round-image {

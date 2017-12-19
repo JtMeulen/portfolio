@@ -1,7 +1,8 @@
 <% include ./partials/header %>
 
-<section id="hero">
-	<div class="headshot">
+<div id="parallax-image"></div>
+<section id="hero">	
+	<div class="headshot">		
 		<div class="round-image"></div>
 		<h1>Joey ter Meulen</h1>
 		<hr>
@@ -102,5 +103,32 @@
 		
 	</div>
 </section>
+
+<script>
+	window.addEventListener("DOMContentLoaded", scrollLoop, false);
+
+	var parallaxImage = document.querySelector("#parallax-image");
+	var hero = document.querySelector("#hero");
+	var yScrollPos;
+
+	function scrollLoop(e) {
+		yScrollPos = window.scrollY;
+
+		setTranslate(0, yScrollPos * -0.4, parallaxImage);
+		setFade(yScrollPos, hero);
+		requestAnimationFrame(scrollLoop);
+	}
+
+	function setTranslate(xPos, yPos, el) {
+		el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+	}
+
+	function setFade(yPos, el) {
+		console.log(yPos)
+		el.style.opacity = 1-yPos/500
+	}
+
+
+</script>
 
 <% include ./partials/footer %>
