@@ -126,7 +126,7 @@ header h2 {
        			  2px 2px 0 black;
 }
 
-#hero ul {
+#hero ul, .media-links {
 	display: flex;
 	font-size: 35px;
 	width: 125px;
@@ -226,9 +226,52 @@ header h2 {
 #project5{display: none;}
 #project6{background-image: url(../img/python_logo.jpg);}
 
+
+/* Footer Styling */
 footer {
-	height: 250px;
+	min-height: 250px;
 	background-color: #242526;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer p {
+	margin: 0;
+	padding: 30px 0;
+}
+
+#contact-container {
+	display: none;
+	margin: auto;
+	width: 500px;
+}
+
+#contact-form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+#contact-form > * {
+	margin: 3px;
+}
+
+#contact-form textarea {
+	resize: none;	
+	height: 100px;
+}
+
+.media-links {
+	margin-top: 25px;
+}
+
+footer a {
+	color: white;
+}
+footer a:hover {
+	color: grey;
 }
 
 /**** Animation Keyframes ****/
@@ -269,6 +312,13 @@ footer {
 
 	.title hr {
 		width: 80%;
+	}
+}
+
+/* contact form*/
+@media screen and (max-width: 501px){
+	#contact-container {
+		width: 100%;
 	}
 }
 

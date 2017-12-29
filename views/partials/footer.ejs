@@ -1,4 +1,84 @@
-	<footer></footer>
+	<footer>
+		<p>For more info you can send me an email through this form or find my trough one of the links below</p>
+		
+		<button id="showContact">Email</button>
+		<div id="contact-container">
+			<form id="contact-form" >
+				<label for="contactName">Name</label>
+				<input id="contactName" type="text" name="name" placeholder="John Doe">
+
+				<label for="contactEmail">Email</label>
+				<input id="contactEmail" type="email" name="email" placeholder="john@example.com">
+
+				<label for="contactMessage">Message</label>
+				<textarea id="contactMessage" name="message" placeholder="Your message here..."></textarea>
+
+				<input type="text" name="_gotcha" style="display:none" />
+
+				<button type="submit">Send</button>
+			</form>
+		</div>
+		
+		<ul class="media-links">
+			<li><a href="https://www.facebook.com/joey.termeulen" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+			<li><a href="https://www.linkedin.com/in/joey-ter-meulen-205365120/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+			<li><a href="https://github.com/JtMeulen" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+		</ul>
+
+		<p>Image used from <a href="unsplash.com">Unsplash</a>. Website made by Joey ter Meulen in 2017.</p>
+
+	</footer>
+
+	<script>
+		// Paralax Scrolling
+		window.addEventListener("DOMContentLoaded", scrollLoop, false);
+
+		var parallaxImage = document.querySelector("#parallax-image");
+		var hero = document.querySelector("#hero");
+		var yScrollPos;
+
+		function scrollLoop(e) {
+			yScrollPos = window.scrollY;
+
+			setTranslate(0, yScrollPos * -0.4, parallaxImage);
+			setFade(yScrollPos, hero);
+			requestAnimationFrame(scrollLoop);
+		}
+
+		function setTranslate(xPos, yPos, el) {
+			el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+		}
+
+		function setFade(yPos, el) {
+			el.style.opacity = 1-yPos/500
+		}
+
+		//  Contact form
+		$("#showContact").click(function(){
+			$("#contact-container").slideToggle();
+		});
+
+		$("#contact-form").submit(function(e){
+			var name    = document.getElementById('contactName');
+    		var email   = document.getElementById('contactEmail');
+    		var message = document.getElementById('contactMessage');
+
+			if(!name.value || !email.value || !message.value) {
+				alert("No entries");
+				return false;
+			} else {
+				$.ajax({
+				    url: "https://formspree.io/joeytermeulen@gmail.com", 
+				    method: "POST",
+				    data: $(this).serialize(),
+				    dataType: "json"
+				});
+				e.preventDefault();
+				$(this).get(0).reset();
+			}
+		})
+
+	</script>
 
 	</body>
 </html>
