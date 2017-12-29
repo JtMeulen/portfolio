@@ -264,14 +264,41 @@ footer p {
 }
 
 .media-links {
-	margin-top: 25px;
+	margin-top: 15px;
 }
 
 footer a {
 	color: white;
 }
 footer a:hover {
-	color: grey;
+	color: #dbdbdb;
+}
+
+#showContact, #send-email {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: bold;	
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+}
+
+#showContact {
+	width: 125px;
+	height: 30px;	
+	background: white;
+}
+
+#showContact:hover {
+	background: #dbdbdb;
+}
+
+#send-email:hover {
+	background: #7cc160;
+}
+
+#showContact:focus, #send-email:focus {
+	outline: none;
 }
 
 /**** Animation Keyframes ****/

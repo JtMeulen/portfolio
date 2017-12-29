@@ -1,5 +1,5 @@
-	<footer>
-		<p>For more info you can send me an email through this form or find my trough one of the links below</p>
+	<footer id="footer">
+		<p>For more info you can send me an email through this form or find me through one of the links below</p>
 		
 		<button id="showContact">Email</button>
 		<div id="contact-container">
@@ -15,7 +15,7 @@
 
 				<input type="text" name="_gotcha" style="display:none" />
 
-				<button type="submit">Send</button>
+				<button id="send-email" type="submit">Send</button>
 			</form>
 		</div>
 		
@@ -64,7 +64,7 @@
     		var message = document.getElementById('contactMessage');
 
 			if(!name.value || !email.value || !message.value) {
-				alert("No entries");
+				alertify.error("Please check your entries");
 				return false;
 			} else {
 				$.ajax({
@@ -75,6 +75,7 @@
 				});
 				e.preventDefault();
 				$(this).get(0).reset();
+				alertify.success("Message sent");
 			}
 		})
 

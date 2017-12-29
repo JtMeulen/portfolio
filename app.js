@@ -9,6 +9,10 @@ app.use(express.static(__dirname + "/public"));
 
 // homepage
 app.get("/", function(req, res){
+	res.redirect("/index");
+});
+
+app.get("/index", function(req, res){
 	res.render("index");
 });
 
