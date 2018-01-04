@@ -301,6 +301,16 @@ footer a:hover {
 	outline: none;
 }
 
+#credits {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+#credits p {
+	padding: 3px;
+}
+
 /**** Animation Keyframes ****/
 /* Hero animations */
 @keyframes roundImageFadeIn {
