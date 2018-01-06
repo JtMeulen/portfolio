@@ -224,9 +224,9 @@ header h2 {
 	cursor: pointer;
 }
 /* Showreel thumbnail images*/
-#project1{background-image: url(../img/shoppingcard_thumb.png);}
+#project1{background-image: url(../img/upnext_thumb.png);}
 #project2{background-image: url(../img/mountaintravel_thumb.png);}
-#project3{display: none;}
+#project3{background-image: url(../img/shoppingcard_thumb.png);}
 #project4{display: none;}
 #project5{display: none;}
 #project6{background-image: url(../img/python_logo.jpg);}
@@ -311,7 +311,7 @@ footer a:hover {
 }
 
 #credits {
-	margin-top: 20px;
+	margin: 20px 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

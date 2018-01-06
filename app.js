@@ -17,12 +17,16 @@ app.get("/index", function(req, res){
 });
 
 // project pages
-app.get("/shoppingcard", function(req, res){
-	res.render("shoppingcard");
+app.get("/upnext", function(req, res){
+	res.render("upnext");
 });
 
 app.get("/mountaintravel", function(req, res){
 	res.render("mountaintravel");
+});
+
+app.get("/shoppingcard", function(req, res){
+	res.render("shoppingcard");
 });
 
 app.get("/otherwork", function(req, res){
