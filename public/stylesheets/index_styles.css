@@ -212,15 +212,25 @@ header h2 {
 	flex-basis: 350px;
 	height: 200px;
 	transition: all .3s .1s ease-in;
+	font-size: 12px;
 }
 
 .overlay h3 {
 	margin-top: 0;
 	padding-top: 10px;
+	font-size: 16px;
+}
+
+.overlay p {
+	padding: 10px;
+}
+
+.overlay li{
+	text-align: left;
 }
 
 .project:hover .overlay {
-	opacity: 0.8;
+	opacity: 0.9;
 	cursor: pointer;
 }
 /* Showreel thumbnail images*/

@@ -48,7 +48,12 @@ section:nth-of-type(even){
 }
 
 section p, section ul, section a {	
+	font-size: 18px;
 	padding: 0 10%;
+}
+
+section p a {
+	padding: 0;
 }
 
 section a:visited, section a:link {
