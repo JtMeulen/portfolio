@@ -367,10 +367,32 @@ footer a:hover {
 		background-position: 50%;
 	}
 
+	#about p {
+		padding: 36px;
+	}
+
 	.title hr {
 		width: 80%;
 	}
 }
+
+@media (min-width: 550px) and (max-height: 400px) {
+    #hero {
+    	justify-content: center;
+		align-items: flex-start;
+    }
+
+    .round-image {
+		background-image: url(../img/joey.png);
+		transform: scale(0.7);
+		width: 200px;
+		height: 200px;
+		margin-top: 10px;
+	}
+
+	#about p {
+		padding: 36px;
+	}
 
 /* contact form*/
 @media screen and (max-width: 501px){

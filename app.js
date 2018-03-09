@@ -1,5 +1,5 @@
 // required modules
-const 	express = require("express"),
+var 	express = require("express"),
 		app		= express();
 
 // configuration
