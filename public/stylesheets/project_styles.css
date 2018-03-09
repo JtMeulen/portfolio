@@ -111,6 +111,41 @@ iframe {
 	padding-top: 10px;
 }
 
+@media (min-width: 550px) and (max-height: 400px) {
+    #hero {
+    	justify-content: center;
+		align-items: flex-start;
+    }
+
+    .round-image {
+		background-image: url(../img/joey.png);
+		transform: scale(0.7);
+		width: 200px;
+		height: 200px;
+		margin-top: 10px;
+	}
+
+	#about p {
+		padding: 36px;
+	}
+	
+	#headerProjects h2 {
+		padding-left: 20px;
+	}
+
+	.titlebar h1, .titlebar h4 {
+		padding-left: 20px;
+	}
+
+	iframe {
+		width: 80%;
+		height: 200px;
+	}
+
+	#copy_photo_image {
+	text-align: center;
+	padding-top: 10px;
+	}
 
 /* Tablet*/
 @media screen and (max-width: 800px){
