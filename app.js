@@ -29,6 +29,10 @@ app.get("/shoppingcard", function(req, res){
 	res.render("shoppingcard");
 });
 
+app.get("/burgerbuilder", function(req, res){
+	res.render("burgerbuilder");
+});
+
 app.get("/otherwork", function(req, res){
 	res.render("other_work");
 });
