@@ -33,6 +33,10 @@ app.get("/burgerbuilder", function(req, res){
 	res.render("burgerbuilder");
 });
 
+app.get("/iconstructmg", function(req, res){
+	res.render("iconstructmg");
+});
+
 app.get("/otherwork", function(req, res){
 	res.render("other_work");
 });
