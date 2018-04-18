@@ -3,7 +3,8 @@
 		
 		<button id="showContact">Email</button>
 		<div id="contact-container">
-			<form id="contact-form" >
+			<form id="contact-form" action="https://formspree.io/joeytermeulen@gmail.com"
+      method="POST">
 				<label for="contactName">Name</label>
 				<input id="contactName" type="text" name="name" placeholder="John Doe">
 
@@ -61,26 +62,26 @@
 			$("#contact-container").slideToggle();
 		});
 
-		$("#contact-form").submit(function(e){
-			var name    = document.getElementById('contactName');
-    		var email   = document.getElementById('contactEmail');
-    		var message = document.getElementById('contactMessage');
+		// $("#contact-form").submit(function(e){
+		// 	var name    = document.getElementById('contactName');
+  //   		var email   = document.getElementById('contactEmail');
+  //   		var message = document.getElementById('contactMessage');
 
-			if(!name.value || !email.value || !message.value) {
-				alertify.error("Please check your entries");
-				return false;
-			} else {
-				$.ajax({
-				    url: "https://formspree.io/joeytermeulen@gmail.com", 
-				    method: "POST",
-				    data: $(this).serialize(),
-				    dataType: "json"
-				});
-				e.preventDefault();
-				$(this).get(0).reset();
-				alertify.success("Message sent");
-			}
-		})
+		// 	if(!name.value || !email.value || !message.value) {
+		// 		alertify.error("Please check your entries");
+		// 		return false;
+		// 	} else {
+		// 		$.ajax({
+		// 		    url: "https://formspree.io/joeytermeulen@gmail.com", 
+		// 		    method: "POST",
+		// 		    data: $(this).serialize(),
+		// 		    dataType: "json"
+		// 		});
+		// 		e.preventDefault();
+		// 		$(this).get(0).reset();
+		// 		alertify.success("Message sent");
+		// 	}
+		// })
 
 	</script>
 
